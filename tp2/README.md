@@ -31,6 +31,8 @@ Chaque trampoline, saute dans `idt_common` qui appelle le gestionnaire d'interru
 
 **Activez les interruptions dans une boucle infinie. Que constatez-vous ?**
 
+On fais une petite division par 0 pour avoir une interruption. La fonction intr_hdlr de intr.c
+
 ---
 
 ### Question 3
