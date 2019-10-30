@@ -41,6 +41,10 @@ Par défaut, les fichiers de TP permettent d'accéder à un objet global pré-in
 
 **Pourquoi le noyau indique `0x302010` et pas `0x300000` comme adresse de début ? Indice: essayer de comprendre linker.lds, regardez également le code de "entry.s"**
 
+### Reponse 1
+
+Le premier bout de code du noyaux, "entry.s" il crée la pile noyau initial, pour eviter de mettre la pile sur la zone memoire de grub. Du coup réserve 0x2000 zone mémoire.
+
 ---
 
 ### Question 2
@@ -53,8 +57,13 @@ Par défaut, les fichiers de TP permettent d'accéder à un objet global pré-in
 
 **Vous allez découvrir différentes zones de mémoire physique, certaines étant réservées, d'autres libres. Déclarez un pointeur d'entier par exemple et initialisez le avec une des adresses que vous avez trouvée. Essayez de lire/écrire la mémoire à cette adresse. Que se passe-t-il ? Avez-vous un "segmentation fault" ? Pourquoi ?**
 
+### Reponse 3
 ---
 
 ### Question 4
 
 **Essayez de lire/écrire en dehors de la RAM disponible (128MB). Que se passe-t-il ?**
+
+### Reponse 4
+
+Il n'y a pas d'erreur lors de l'écriture, et la lecture révèle que l'on a rien écrit et retourne 0
