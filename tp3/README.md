@@ -52,11 +52,15 @@ void userland()
 
 **Que se passe-t-il lors du chargement de DS/ES/FS/GS ?**
 
+Tout ce passe bien les flags sont bien changé
+
 ---
 
 ### Question 3.2
 
 **Que se passe-t-il lors du chargement de SS ?**
+
+Crash avec l'erreur "general protection"
 
 ---
 
@@ -65,6 +69,8 @@ void userland()
 **Essayez d'effectuer un "far jump" vers la fonction `userland()`. Pour cela il faut charger dans `CS` le sélecteur de code ring 3 et dans EIP l'adresse de la fonction `userland()`. Vous pouvez utiliser le type `fptr32_t` et la fonction `farjump()` de notre noyau.**
 
 **Quelles conclusions en tirez-vous ? Comment un noyau fait-il pour démarrer une tâche en ring 3 ?**
+
+Ca marche toujours pas c'est la même erreur qu'avant
 
 ---
 
