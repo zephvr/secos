@@ -12,8 +12,8 @@
 
 #define c0_sel  gdt_krn_seg_sel(c0_idx)
 #define d0_sel  gdt_krn_seg_sel(d0_idx)
-#define c3_sel  gdt_krn_seg_sel(c3_idx)
-#define d3_sel  gdt_krn_seg_sel(d3_idx)
+#define c3_sel  gdt_usr_seg_sel(c3_idx)
+#define d3_sel  gdt_usr_seg_sel(d3_idx)
 #define ts_sel  gdt_krn_seg_sel(ts_idx)
 
 seg_desc_t GDT[6];
